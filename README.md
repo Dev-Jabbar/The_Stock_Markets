@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Stock Analysis App
+Overview
+This is a stock analysis application built with Next.js, leveraging its React framework for building fast, efficient, and static web pages. The app provides insights into stock data, including information on highs, lows, opens, closes, sum totals, moving averages, daily returns, and the relative strength index (RSI). It utilizes static pages for quick loading, courtesy of pre-built HTML.
 
-## Getting Started
+Features
+Static Pages for Faster Loading: Utilizing Next.js static pages for quick loading of content.
+API for Testing: An API (/app/api/timeseries) is included for testing purposes, using the daily_IBM.json data file. just replace the url on usefetch hook with http://localhost:3000/api/TimeSeries
 
-First, run the development server:
+Organized Folder Structure: The app follows a highly organized folder structure with a focus on readability and maintainability.
 
-```bash
-npm run dev
-# or
+Key directories include:
+layouts: The base layout of the app.
+pages: Children components rendered within the layout.
+components: Basic UI components, charts (created using react-apex-charts), and views.
+hooks: Data fetching and computational logic.
+providers: Services accessible app-wide, including context providers (useContext) for managing global states and a DarkModeContext for dark mode.
+
+Usage
+Run Development Server:
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This starts the app in development mode.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the App:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+yarn build
+Build the app for production.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run in Production Mode:
 
-## Learn More
+yarn start
+Start the app in production mode.
 
-To learn more about Next.js, take a look at the following resources:
+Tech Stack
+Frontend Framework: Next.js
+UI Framework: Tailwind CSS
+Charting Library: React-Apex-Charts
+Styling and UI Components: Material-UI
+State Management: Context API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Data Fetching and caching: SWR (
+SWR (stale-while-revalidate) is a React Hooks library for remote data fetching that automatically manages caching, revalidation, and state synchronization between components. i set the revalidation to every 24 hours)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Dark Mode: Next Theme
+Alerts: React-Toastify
 
-## Deploy on Vercel
+Functionality
+Stock Data Analysis: Analyze stock data including highs, lows, opens, closes, sum totals, moving averages, daily returns, and RSI.
+Date Range Specification: Specify the date range for analysis.
+Global Access to Services: Utilize context providers for managing global states and dark mode.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributing infinitypaul
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+License
+This project is licensed under the MIT License
