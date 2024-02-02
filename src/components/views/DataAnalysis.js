@@ -31,7 +31,7 @@ const DataAnalysis = () => {
             </div>
             <div className=" h-[175px] 2xl:h-[200px] ">
               <div className="dark:text-gray-400 text-black mx-3 mt-1   italic text-xs 2xl:text-sm font-extrabold">
-                Daily returns
+                MovingAverage
               </div>
               <div className=" h-[80%] bg-[#444]  w-full">
                 <Skeleton
@@ -43,7 +43,7 @@ const DataAnalysis = () => {
             </div>
             <div className=" h-[175px] 2xl:h-[200px] ">
               <div className="dark:text-gray-400 text-black mx-3 mt-1   italic text-xs 2xl:text-sm font-extrabold">
-                Daily returns
+                Relative Strength Index
               </div>
               <div className=" h-[80%] bg-[#444]  w-full">
                 <Skeleton

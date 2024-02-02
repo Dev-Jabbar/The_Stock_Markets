@@ -10,12 +10,19 @@ const fetcher = async (url) => {
   }
 
   const data = await response.json();
+
+  if (!data) {
+  }
   return data;
 };
 
 // Use the fetcher function with SWR
 const useFetchStockData = (symbol) => {
+  if (!symbol) {
+  }
+
   const { isloading, setIsloading } = useAppContext();
+
   const { data, error } = useSWR(
     `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${process.env.NEXTJS_API_KEY}`,
     fetcher,

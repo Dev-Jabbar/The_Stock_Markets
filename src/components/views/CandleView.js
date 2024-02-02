@@ -45,15 +45,7 @@ const CandleView = ({ symbol }) => {
   useEffect(() => {
     const fetchData = async () => {
       if (data && data["Information"]) {
-        toast.success("Api request limit reached", {
-          position: "top-right",
-          autoClose: 3000, // Set the duration for the notification to be visible (in milliseconds)
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        alert(data["Information"]);
 
         console.error("Additional information:", data["Information"]);
       } else if (data && !isLoading && !isError) {
