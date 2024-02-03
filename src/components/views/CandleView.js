@@ -8,6 +8,12 @@ import CandlestickChart from "../charts/CandlestickChart";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const transformStockData = (rawData) => {
+  // Check if rawData is defined and not null
+  if (!rawData) {
+    console.error("Raw data is undefined or null.");
+    return []; // or handle it according to your use case
+  }
+
   // Convert raw data to an array of objects
   const dataArray = Object.entries(rawData).map(([date, dataPoint]) => {
     return {

@@ -18,9 +18,6 @@ const fetcher = async (url) => {
 
 // Use the fetcher function with SWR
 const useFetchStockData = (symbol) => {
-  if (!symbol) {
-  }
-
   const { isloading, setIsloading } = useAppContext();
 
   const { data, error } = useSWR(

@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`mx-10 mb-20 ${inter.className} dark:bg-black text-white`}
+        className={`md:mx-10 mx-4 mb-20 ${inter.className} dark:bg-black text-white`}
       >
         {/* Context provider for the app */}
         <AppContextProvider>

@@ -1,4 +1,10 @@
 export function calculateDailyReturns(data) {
+  // Check if data is defined and not null
+  if (!data) {
+    console.error("Data is undefined or null.");
+    return {}; // or handle it according to your use case
+  }
+
   // Extract and sort dates
   const dates = Object.keys(data).sort((a, b) => new Date(a) - new Date(b));
 

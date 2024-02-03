@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <div className="w-full flex flex-col space-y-6 ">
-      <div className="w-full flex-col  z-10 pr-20 space-y-6 fixed ">
+      <div className="w-full flex-col  z-10 md:pr-20 pr-8  space-y-6 fixed ">
         <Header />
 
         <Interactions />
