@@ -101,14 +101,18 @@ const DataAnalysis = () => {
                   className="flex flex-col space-y-2 p-2 "
                   title="total markert opens"
                 >
-                  <h1 className="text-blue-500 text-lg font-extrabold">Open</h1>
+                  <h1 className="text-blue-500 text-lg font-extrabold">
+                    Total Open
+                  </h1>
                   <div>{totals.totalOpen}</div>
                 </div>
                 <div
                   className="flex flex-col space-y-2"
                   title="total markert highs"
                 >
-                  <h1 className="text-blue-500 text-lg font-extrabold">High</h1>
+                  <h1 className="text-blue-500 text-lg font-extrabold">
+                    Total High
+                  </h1>
                   <div>{totals.totalHigh}</div>
                 </div>
               </div>
@@ -117,7 +121,9 @@ const DataAnalysis = () => {
                   className="flex flex-col space-y-2"
                   title="total markert lows"
                 >
-                  <h1 className="text-blue-500 text-lg font-extrabold">Low</h1>
+                  <h1 className="text-blue-500 text-lg font-extrabold">
+                    Total Low
+                  </h1>
                   <div>{totals.totalLow}</div>
                 </div>
                 <div
@@ -125,7 +131,7 @@ const DataAnalysis = () => {
                   title="total markert close"
                 >
                   <h1 className="text-blue-500 text-lg font-extrabold">
-                    Close
+                    Total Close
                   </h1>
                   <div>{totals.totalClose}</div>
                 </div>
